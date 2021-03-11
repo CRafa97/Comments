@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Sobre las conferencias de HC} % Custom header text
+%\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Sobre las conferencias de HC} % Article title
+\author{%
+\textsc{Carlos Rafael Ortega Lezcano}\\[1ex]
+\textsc{Eric Martin Garcia} \\[1ex]
+\normalsize Grupo C511 \\ % Your institution
+%\normalsize \href{mailto:john@smith.com}{john@smith.com} % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section*{Conferencia 1}
+
+Definiremos la noción intuitiva de algoritmo como un conjunto de acciones finitas aplicadas finitamente a la información de un problema transformando esta en una solución para el problema. Un ejemplo es la definición de función matemática donde $f$ transforma un valor $x \in A$ en un valor que pertenece a $B$ mediante $f(x)$.
+
+\textbf{Problema de Decisión}: Un problema se considera de decisión si existe un algoritmo que de manera excluyente suministra una salida binaria para cada entrada del problema, esta salida debe ser \textit{SI} o \textit{NO}.
+
+Algunos ejemplos de problemas de decisión serían, dada una fórmula de la lógica proposicional determinar si es verdadera o falsa, dado el problema del viajante vendedor saber si existe un recorrido de viaje que genere ganancias. 
+
+Por tanto podemos decir que las definiciones de decidible y computable son equivalentes, además la definición intuitiva de computable no incluye la complejidad del algoritmo, por ejemplo los dos ejemplos anteriores son computables pero según su complejidad son NP-Completos
+
+Dado un problema debe distinguirse entre clase del problema, las subclases de este problema y ejemplos específicos de la clase, por tanto a la hora de definir algoritmos podemos encontrar algunos para solucionar cualquier subclase de un problema o ejemplo de la clase, otros que solo resuelven un conjunto de subclases del problema y es posible encontrar problemas para los cuales no podemos escribir un algoritmo que resuelva todas las subclases del problema.
+
+Por lo anterior es posible pensar si existen problemas los cuales no son decidibles, el matemático David Hilbert, presentó una lista de problemas matemáticos aun sin resolver por entonces. Entre estos se encontraba el LPO, el cual es un problema semidecidible ya que existe un procedimiento que si la formula es verdadera, para dando una respuesta afirmativa y si la fórmula es falsa, puede que no pare dando una respuesta negativa, este no es muy efectivo ya que no se puede realizar satisfactoriamente la partición del conjunto de entrada. Por tanto esto nos lleva a pensar que el LPO no es decidible, en 1936 Alan Turing demostró esto planteando una definición rigurosa de computabilidad, ya que si se quiere demostrar que un problema no es decidible, se tiene que demostrar que no existe algoritmo que de modo general para cualquier ejemplo del problema termine dando una respuesta afirmativa o negativa.
+
+Para su demostración Turing planteó una definición rigurosa de algoritmo basada en una máquina abstracta que definía el concepto de computabilidad, convertida en una fase posterior de la demostración en una máquina que empleaba otras máquinas, terminando en lo que hoy conocemos como las computadoras físicas.
+
+\textbf{La Tesis de Church-Turing}: Alonzo Church, tutor de la tesis de doctorado de Alan Turing propuso el Cálculo Lambda como un formalismo para el cálculo efectivo de funciones, este daría con posterioridad al surgimiento del primer lenguaje de programación, LISP. La definición de la tesis planteada por ambos es: \textit{Una función es Turing-computable si existe una Máquina de Turing que realiza el cálculo de efectivo de la función, por tanto ''Toda función efectivamente calculable es Turing-computable''}
+
+Además del CL y la MT se han ofrecido otras definiciones todas equivalentes:
+\begin{enumerate}
+	\item Las Funciones recursivas de Herbrand- Gödel-Kleene 
+	\item Sistemas de Post  
+	\item Algoritmos de Markov
+\end{enumerate}
+
+\textbf{Sugerencias}: Cuando se menciona que los conceptos de computable y decidible son equivalentes se podría profundizar en probar porque se puede hacer esta afirmación. Se podría a la hora de hablar del LPO suministrar algún ejemplo que permita ver la existencia de semidecibilidad del problema.
+
+%------------------------------------------------
+
+\section*{Conferencia 2}
+
+%------------------------------------------------
+
+\section*{Conferencia 3}
+
+%------------------------------------------------
+
+\section*{Conferencia 4}
+
+%------------------------------------------------
+
+\section*{Conferencia 5}
+
+%------------------------------------------------
+
+\section*{Conferencia 6}
+
+%------------------------------------------------
+
+\section*{Conferencia 7}
+
+%------------------------------------------------
+
+\section*{Conferencia 8}
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+\newblock Assortative pairing and life history strategy - a cross-cultural
+  study.
+\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
