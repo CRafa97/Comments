@@ -121,8 +121,35 @@ Además del CL y la MT se han ofrecido otras definiciones todas equivalentes:
 
 \section*{Conferencia 2}
 
-%------------------------------------------------
+Decimos que un número es Turing-computable si existe una Máquina de Turing que lo genera y recordando la tesis de Church-Turing será computable. El conjunto de los números naturales es computable, el procedimiento para probarlo es el empleado por Dedekind-Peano, que consiste en lo siguiente $0 \in \textbf{N}$, luego si $n \in \textbf{N}$ entonces $suc(n) \in \textbf{N}$, para construir una máquina de turing que genere cualquier número natural se puede emplear la representación unaria, de la siguiente forma, el único símbolo de nuestro sistema unario será $1$, luego la regla de formación sería la siguiente:
 
+\begin{enumerate}
+	\item $\overline{0} = 1$
+	\item $\overline{n + 1} = \overline{n}\;1$
+\end{enumerate}
+
+Con este representación queda de forma intuitiva la creación de la función sucesor en la MT. Adicionalmente los conjuntos $\textbf{Z}$ y $\textbf{Q}$ tienen definiciones constructivas a partir de $\textbf{N}$ 
+
+El conjunto de los números reales está compuesto por racionales e irracionales, entre las alternativas definitorias podemos encontrar las cortaduras de Dedekind, las clases de equivalencia de sucesiones de Cauchy y la axiomática que expone que los reales son un Cuerpo Ordenado Completo. En el caso de los irracionales los cuales no presentan un período se desea saber si son computables ya que estos definen la computabilidad del conjunto de los números reales.
+
+Para definir el concepto de enumerable primeramente es necesario definir que es la correspondencia biunívoca de pares de conjuntos. Si dos conjuntos pueden ser puestos en correspondencia 1 a 1 mediante una función biyectiva (es posible encontrar mas de una función biyectiva para la correspondencia entre los conjuntos), entonces tienen la misma cardinalidad de elementos.
+
+Sabemos que $\textbf{N} \subset \textbf{Z} \subset \textbf{Q}$, por tanto podríamos suponer que a medida que avanzamos en la pertenencia de conjunto aumenta la cantidad de elementos, tal como planteo Euclides, \textit{"el todo es mayor que cualquiera de sus partes propias"}, pero en 1638 nota que los cuadrados de los enteros positivos pueden ser puesto en correspondencia con todos los números positivos, más tarde Bolzano considera la equivalencia geométrica entre el espacio unidimensional y el espacio n-dimensional.
+
+Para definir si un conjunto es enumerable tomaremos el conjunto $\textbf{N}$, entonces cualquier conjunto que pueda ser puesto en correspondencia 1 a 1 con el el conjunto $\textbf{N}$ será enumerable, por tanto el propio $\textbf{N}$ es enumerable y también cualquier conjunto finito será enumerable, ejemplos de conjuntos infinitos son los enteros y los cuadrados de los enteros positivos.
+
+Otro conjunto de importancia es el conjunto de los números algebraicos, son aquellos números que son raíces de las ecuaciones algebraicas en una variable $x$ con coeficientes enteros, cuya forma general es: $a_0x^n + a_1x^{n-1} + ... + a_{n-1}x + a_n = 0$ con $a_0 \neq 0$. Este conjunto es enumerable debido a que si es posible enumerar el conjunto de todas las ecuaciones algebraicas entonces es posible enumerar sus soluciones, para ello se reemplaza las ecuaciones por sus soluciones las cuales son iguales al grado de la ecuación, para cada una contamos con un conjunto finito numerable, por tanto se obtiene una enumeración con repeticiones de los números algebraicos las cuales pueden ser eliminadas.
+
+La existencia de conjuntos no enumerables fue probada por Cantor quien utilizó un método conocido como \textit{diagonalización}, para ello empleo la tabla infinita de funciones de una variable $f: \textbf{N} \rightarrow \textbf{N}$, en la cual al analizar la diagonal nos percatamos que esta también es una función de una variable, al notar la diagonal observamos que su ecuación es: $f(a) = f_a(a) + 1$, luego por reducción al absurdo asumamos que el índice $i$ es con el cual la función diagonal fue enumerada, $f_i$ es la función de la diagonal por tanto para $i$ resultaría $f(i) = f_i(i) = f_i(i) + 1$ obteniendo que no es posible enumerar la función de la diagonal. Otro ejemplo de conjunto no enumerable demostrado empleando este método de Cantor es: el conjunto de todos los subconjuntos (enumerables) de $\textbf{N}$.
+
+Empleando los números algebraicos se encontró que números que eran solución de ecuaciones algebraicas eran irracionales, por ejemplo $\sqrt{2}$ es solución de $x^2 - 2 = 0$, el cual es un número computable, ahora ¿será posible obtener todos los números irracionales mediante soluciones de ecuaciones algebraicas?, como sabemos no, estos números que no son raíces se denominan \textit{trascendentes}, el ejemplo que tenemos es $\pi$ y también $2^{\sqrt{2}}$ el cual se demostró que no es algebraico. No existe un algoritmo para determinar si un número real es trascendental o no, ni lo puede haber según demostró Turing.
+
+Según lo anterior podemos concluir que si no es posible determinar si un número es trascendental entonces no es posible enumerar el conjunto de los números reales, por tanto se puede decir que los conceptos de enumerable y computable son equivalentes, ya que no es posible determinar mediante un proceso si un número es trascendental, por tanto no es posible enumerarlo.
+
+\textbf{Sugerencias:} ...
+
+
+%------------------------------------------------
 \section*{Conferencia 3}
 
 %------------------------------------------------
@@ -151,15 +178,15 @@ Además del CL y la MT se han ofrecido otras definiciones todas equivalentes:
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
 
-\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+%\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
+%\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+%Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+%\newblock Assortative pairing and life history strategy - a cross-cultural
+%  study.
+%\newblock {\em Human Nature}, 20:317--330.
  
-\end{thebibliography}
+%\end{thebibliography}
 
 %----------------------------------------------------------------------------------------
 
