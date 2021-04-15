@@ -92,85 +92,84 @@
 
 \section*{Conferencia 1}
 
-Definiremos la noción intuitiva de algoritmo como un conjunto de acciones finitas aplicadas finitamente a la información de un problema transformando esta en una solución para el problema. Un ejemplo es la definición de función matemática donde $f$ transforma un valor $x \in A$ en un valor que pertenece a $B$ mediante $f(x)$.
+Definiremos la noci\'on intuitiva de algoritmo como un conjunto de acciones finitas aplicadas finitamente a la informaci\'on de un problema transformando esta en una soluci\'on para el problema. Un ejemplo es la definici\'on de funci\'on matem\'atica donde $f$ transforma un valor $x \in A$ en un valor que pertenece a $B$ mediante $f(x)$.
 
-\textbf{Problema de Decisión}: Un problema se considera de decisión si existe un algoritmo que de manera excluyente suministra una salida binaria para cada entrada del problema, esta salida debe ser \textit{SI} o \textit{NO}.
+\textbf{Problema de Decisi\'on}: Un problema se considera de decisi\'on si existe un algoritmo que de manera excluyente suministra una salida binaria para cada entrada del problema, esta salida debe ser \textit{SI} o \textit{NO}.
 
-Algunos ejemplos de problemas de decisión serían, dada una fórmula de la lógica proposicional determinar si es verdadera o falsa, dado el problema del viajante vendedor saber si existe un recorrido de viaje que genere ganancias. 
+Algunos ejemplos de problemas de decisi\'on ser\'ian, dada una f\'ormula de la l\'ogica proposicional determinar si es verdadera o falsa, dado el problema del viajante vendedor saber si existe un recorrido de viaje que genere ganancias. 
 
-Por tanto podemos decir que las definiciones de decidible y computable son equivalentes, además la definición intuitiva de computable no incluye la complejidad del algoritmo, por ejemplo los dos ejemplos anteriores son computables pero según su complejidad son NP-Completos
+Por tanto podemos decir que las definiciones de decidible y computable son equivalentes, adem\'as la definici\'on intuitiva de computable no incluye la complejidad del algoritmo, por ejemplo los dos ejemplos anteriores son computables pero seg\'un su complejidad son NP-Completos
 
-Dado un problema debe distinguirse entre clase del problema, las subclases de este problema y ejemplos específicos de la clase, por tanto a la hora de definir algoritmos podemos encontrar algunos para solucionar cualquier subclase de un problema o ejemplo de la clase, otros que solo resuelven un conjunto de subclases del problema y es posible encontrar problemas para los cuales no podemos escribir un algoritmo que resuelva todas las subclases del problema.
+Dado un problema debe distinguirse entre clase del problema, las subclases de este problema y ejemplos espec\'ificos de la clase, por tanto a la hora de definir algoritmos podemos encontrar algunos para solucionar cualquier subclase de un problema o ejemplo de la clase, otros que solo resuelven un conjunto de subclases del problema y es posible encontrar problemas para los cuales no podemos escribir un algoritmo que resuelva todas las subclases del problema.
 
-Por lo anterior es posible pensar si existen problemas los cuales no son decidibles, el matemático David Hilbert, presentó una lista de problemas matemáticos aun sin resolver por entonces. Entre estos se encontraba el LPO, el cual es un problema semidecidible ya que existe un procedimiento que si la formula es verdadera, para dando una respuesta afirmativa y si la fórmula es falsa, puede que no pare dando una respuesta negativa, este no es muy efectivo ya que no se puede realizar satisfactoriamente la partición del conjunto de entrada. Por tanto esto nos lleva a pensar que el LPO no es decidible, en 1936 Alan Turing demostró esto planteando una definición rigurosa de computabilidad, ya que si se quiere demostrar que un problema no es decidible, se tiene que demostrar que no existe algoritmo que de modo general para cualquier ejemplo del problema termine dando una respuesta afirmativa o negativa.
+Por lo anterior es posible pensar si existen problemas los cuales no son decidibles, el matem\'atico David Hilbert, present\'o una lista de problemas matem\'aticos aun sin resolver por entonces. Entre estos se encontraba el LPO, el cual es un problema semidecidible ya que existe un procedimiento que si la formula es verdadera, para dando una respuesta afirmativa y si la f\'ormula es falsa, puede que no pare dando una respuesta negativa, este no es muy efectivo ya que no se puede realizar satisfactoriamente la partici\'on del conjunto de entrada. Por tanto esto nos lleva a pensar que el LPO no es decidible, en 1936 Alan Turing demostr\'o esto planteando una definici\'on rigurosa de computabilidad, ya que si se quiere demostrar que un problema no es decidible, se tiene que demostrar que no existe algoritmo que de modo general para cualquier ejemplo del problema termine dando una respuesta afirmativa o negativa.
 
-Para su demostración Turing planteó una definición rigurosa de algoritmo basada en una máquina abstracta que definía el concepto de computabilidad, convertida en una fase posterior de la demostración en una máquina que empleaba otras máquinas, terminando en lo que hoy conocemos como las computadoras físicas.
+Para su demostraci\'on Turing plante\'o una definici\'on rigurosa de algoritmo basada en una m\'aquina abstracta que defin\'ia el concepto de computabilidad, convertida en una fase posterior de la demostraci\'on en una m\'aquina que empleaba otras m\'aquinas, terminando en lo que hoy conocemos como las computadoras f\'isicas.
 
-\textbf{La Tesis de Church-Turing}: Alonzo Church, tutor de la tesis de doctorado de Alan Turing propuso el Cálculo Lambda como un formalismo para el cálculo efectivo de funciones, este daría con posterioridad al surgimiento del primer lenguaje de programación, LISP. La definición de la tesis planteada por ambos es: \textit{Una función es Turing-computable si existe una Máquina de Turing que realiza el cálculo de efectivo de la función, por tanto ''Toda función efectivamente calculable es Turing-computable''}
+\textbf{La Tesis de Church-Turing}: Alonzo Church, tutor de la tesis de doctorado de Alan Turing propuso el C\'alculo Lambda como un formalismo para el c\'alculo efectivo de funciones, este dar\'ia con posterioridad al surgimiento del primer lenguaje de programaci\'on, LISP. La definici\'on de la tesis planteada por ambos es: \textit{Una funci\'on es Turing-computable si existe una M\'aquina de Turing que realiza el c\'alculo de efectivo de la funci\'on, por tanto ''Toda funci\'on efectivamente calculable es Turing-computable''}
 
-Además del CL y la MT se han ofrecido otras definiciones todas equivalentes:
+Adem\'as del CL y la MT se han ofrecido otras definiciones todas equivalentes:
 \begin{enumerate}
 	\item Las Funciones recursivas de Herbrand- Gödel-Kleene 
 	\item Sistemas de Post  
 	\item Algoritmos de Markov
 \end{enumerate}
 
-\textbf{Sugerencias}: Cuando se menciona que los conceptos de computable y decidible son equivalentes se podría profundizar en probar porque se puede hacer esta afirmación. Se podría a la hora de hablar del LPO suministrar algún ejemplo que permita ver la existencia de semidecibilidad del problema.
+\textbf{Sugerencias}: Cuando se menciona que los conceptos de computable y decidible son equivalentes se podr\'ia profundizar en probar porque se puede hacer esta afirmaci\'on. Se podr\'ia a la hora de hablar del LPO suministrar alg\'un ejemplo que permita ver la existencia de semidecibilidad del problema.
 
 %------------------------------------------------
 
 \section*{Conferencia 2}
 
-Decimos que un número es Turing-computable si existe una Máquina de Turing que lo genera y recordando la tesis de Church-Turing será computable. El conjunto de los números naturales es computable, el procedimiento para probarlo es el empleado por Dedekind-Peano, que consiste en lo siguiente $0 \in \textbf{N}$, luego si $n \in \textbf{N}$ entonces $suc(n) \in \textbf{N}$, para construir una máquina de turing que genere cualquier número natural se puede emplear la representación unaria, de la siguiente forma, el único símbolo de nuestro sistema unario será $1$, luego la regla de formación sería la siguiente:
+Decimos que un n\'umero es Turing-computable si existe una M\'aquina de Turing que lo genera y recordando la tesis de Church-Turing ser\'a computable. El conjunto de los n\'umeros naturales es computable, el procedimiento para probarlo es el empleado por Dedekind-Peano, que consiste en lo siguiente $0 \in \textbf{N}$, luego si $n \in \textbf{N}$ entonces $suc(n) \in \textbf{N}$, para construir una m\'aquina de turing que genere cualquier n\'umero natural se puede emplear la representaci\'on unaria, de la siguiente forma, el \'unico s\'imbolo de nuestro sistema unario ser\'a $1$, luego la regla de formaci\'on ser\'ia la siguiente:
 
 \begin{enumerate}
 	\item $\overline{0} = 1$
 	\item $\overline{n + 1} = \overline{n}\;1$
 \end{enumerate}
 
-Con este representación queda de forma intuitiva la creación de la función sucesor en la MT. Adicionalmente los conjuntos $\textbf{Z}$ y $\textbf{Q}$ tienen definiciones constructivas a partir de $\textbf{N}$ 
+Con este representaci\'on queda de forma intuitiva la creaci\'on de la funci\'on sucesor en la MT. Adicionalmente los conjuntos $\textbf{Z}$ y $\textbf{Q}$ tienen definiciones constructivas a partir de $\textbf{N}$ 
 
-El conjunto de los números reales está compuesto por racionales e irracionales, entre las alternativas definitorias podemos encontrar las cortaduras de Dedekind, las clases de equivalencia de sucesiones de Cauchy y la axiomática que expone que los reales son un Cuerpo Ordenado Completo. En el caso de los irracionales los cuales no presentan un período se desea saber si son computables ya que estos definen la computabilidad del conjunto de los números reales.
+El conjunto de los n\'umeros reales est\'a compuesto por racionales e irracionales, entre las alternativas definitorias podemos encontrar las cortaduras de Dedekind, las clases de equivalencia de sucesiones de Cauchy y la axiom\'atica que expone que los reales son un Cuerpo Ordenado Completo. En el caso de los irracionales los cuales no presentan un per\'iodo se desea saber si son computables ya que estos definen la computabilidad del conjunto de los n\'umeros reales.
 
-Para definir el concepto de enumerable primeramente es necesario definir que es la correspondencia biunívoca de pares de conjuntos. Si dos conjuntos pueden ser puestos en correspondencia 1 a 1 mediante una función biyectiva (es posible encontrar mas de una función biyectiva para la correspondencia entre los conjuntos), entonces tienen la misma cardinalidad de elementos.
+Para definir el concepto de enumerable primeramente es necesario definir que es la correspondencia biun\'ivoca de pares de conjuntos. Si dos conjuntos pueden ser puestos en correspondencia 1 a 1 mediante una funci\'on biyectiva (es posible encontrar mas de una funci\'on biyectiva para la correspondencia entre los conjuntos), entonces tienen la misma cardinalidad de elementos.
 
-Sabemos que $\textbf{N} \subset \textbf{Z} \subset \textbf{Q}$, por tanto podríamos suponer que a medida que avanzamos en la pertenencia de conjunto aumenta la cantidad de elementos, tal como planteo Euclides, \textit{"el todo es mayor que cualquiera de sus partes propias"}, pero en 1638 nota que los cuadrados de los enteros positivos pueden ser puesto en correspondencia con todos los números positivos, más tarde Bolzano considera la equivalencia geométrica entre el espacio unidimensional y el espacio n-dimensional.
+Sabemos que $\textbf{N} \subset \textbf{Z} \subset \textbf{Q}$, por tanto podr\'iamos suponer que a medida que avanzamos en la pertenencia de conjunto aumenta la cantidad de elementos, tal como planteo Euclides, \textit{"el todo es mayor que cualquiera de sus partes propias"}, pero en 1638 nota que los cuadrados de los enteros positivos pueden ser puesto en correspondencia con todos los n\'umeros positivos, m\'as tarde Bolzano considera la equivalencia geom\'etrica entre el espacio unidimensional y el espacio n-dimensional.
 
-Para definir si un conjunto es enumerable tomaremos el conjunto $\textbf{N}$, entonces cualquier conjunto que pueda ser puesto en correspondencia 1 a 1 con el el conjunto $\textbf{N}$ será enumerable, por tanto el propio $\textbf{N}$ es enumerable y también cualquier conjunto finito será enumerable, ejemplos de conjuntos infinitos son los enteros y los cuadrados de los enteros positivos.
+Para definir si un conjunto es enumerable tomaremos el conjunto $\textbf{N}$, entonces cualquier conjunto que pueda ser puesto en correspondencia 1 a 1 con el el conjunto $\textbf{N}$ ser\'a enumerable, por tanto el propio $\textbf{N}$ es enumerable y tambi\'en cualquier conjunto finito ser\'a enumerable, ejemplos de conjuntos infinitos son los enteros y los cuadrados de los enteros positivos.
 
-Otro conjunto de importancia es el conjunto de los números algebraicos, son aquellos números que son raíces de las ecuaciones algebraicas en una variable $x$ con coeficientes enteros, cuya forma general es: $a_0x^n + a_1x^{n-1} + ... + a_{n-1}x + a_n = 0$ con $a_0 \neq 0$. Este conjunto es enumerable debido a que si es posible enumerar el conjunto de todas las ecuaciones algebraicas entonces es posible enumerar sus soluciones, para ello se reemplaza las ecuaciones por sus soluciones las cuales son iguales al grado de la ecuación, para cada una contamos con un conjunto finito numerable, por tanto se obtiene una enumeración con repeticiones de los números algebraicos las cuales pueden ser eliminadas.
+Otro conjunto de importancia es el conjunto de los n\'umeros algebraicos, son aquellos n\'umeros que son ra\'ices de las ecuaciones algebraicas en una variable $x$ con coeficientes enteros, cuya forma general es: $a_0x^n + a_1x^{n-1} + ... + a_{n-1}x + a_n = 0$ con $a_0 \neq 0$. Este conjunto es enumerable debido a que si es posible enumerar el conjunto de todas las ecuaciones algebraicas entonces es posible enumerar sus soluciones, para ello se reemplaza las ecuaciones por sus soluciones las cuales son iguales al grado de la ecuaci\'on, para cada una contamos con un conjunto finito numerable, por tanto se obtiene una enumeraci\'on con repeticiones de los n\'umeros algebraicos las cuales pueden ser eliminadas.
 
-La existencia de conjuntos no enumerables fue probada por Cantor quien utilizó un método conocido como \textit{diagonalización}, para ello empleo la tabla infinita de funciones de una variable $f: \textbf{N} \rightarrow \textbf{N}$, en la cual al analizar la diagonal nos percatamos que esta también es una función de una variable, al notar la diagonal observamos que su ecuación es: $f(a) = f_a(a) + 1$, luego por reducción al absurdo asumamos que el índice $i$ es con el cual la función diagonal fue enumerada, $f_i$ es la función de la diagonal por tanto para $i$ resultaría $f(i) = f_i(i) = f_i(i) + 1$ obteniendo que no es posible enumerar la función de la diagonal. Otro ejemplo de conjunto no enumerable demostrado empleando este método de Cantor es: el conjunto de todos los subconjuntos (enumerables) de $\textbf{N}$.
+La existencia de conjuntos no enumerables fue probada por Cantor quien utiliz\'o un m\'etodo conocido como \textit{diagonalizaci\'on}, para ello empleo la tabla infinita de funciones de una variable $f: \textbf{N} \rightarrow \textbf{N}$, en la cual al analizar la diagonal nos percatamos que esta tambi\'en es una funci\'on de una variable, al notar la diagonal observamos que su ecuaci\'on es: $f(a) = f_a(a) + 1$, luego por reducci\'on al absurdo asumamos que el \'indice $i$ es con el cual la funci\'on diagonal fue enumerada, $f_i$ es la funci\'on de la diagonal por tanto para $i$ resultar\'ia $f(i) = f_i(i) = f_i(i) + 1$ obteniendo que no es posible enumerar la funci\'on de la diagonal. Otro ejemplo de conjunto no enumerable demostrado empleando este m\'etodo de Cantor es: el conjunto de todos los subconjuntos (enumerables) de $\textbf{N}$.
 
-Empleando los números algebraicos se encontró que números que eran solución de ecuaciones algebraicas eran irracionales, por ejemplo $\sqrt{2}$ es solución de $x^2 - 2 = 0$, el cual es un número computable, ahora ¿será posible obtener todos los números irracionales mediante soluciones de ecuaciones algebraicas?, como sabemos no, estos números que no son raíces se denominan \textit{trascendentes}, el ejemplo que tenemos es $\pi$ y también $2^{\sqrt{2}}$ el cual se demostró que no es algebraico. No existe un algoritmo para determinar si un número real es trascendental o no, ni lo puede haber según demostró Turing.
+Empleando los n\'umeros algebraicos se encontr\'o que n\'umeros que eran soluci\'on de ecuaciones algebraicas eran irracionales, por ejemplo $\sqrt{2}$ es soluci\'on de $x^2 - 2 = 0$, el cual es un n\'umero computable, ahora ¿ser\'a posible obtener todos los n\'umeros irracionales mediante soluciones de ecuaciones algebraicas?, como sabemos no, estos n\'umeros que no son ra\'ices se denominan \textit{trascendentes}, el ejemplo que tenemos es $\pi$ y tambi\'en $2^{\sqrt{2}}$ el cual se demostr\'o que no es algebraico. No existe un algoritmo para determinar si un n\'umero real es trascendental o no, ni lo puede haber seg\'un demostr\'o Turing.
 
-Según lo anterior podemos concluir que si no es posible determinar si un número es trascendental entonces no es posible enumerar el conjunto de los números reales, por tanto se puede decir que los conceptos de enumerable y computable son equivalentes, ya que no es posible determinar mediante un proceso si un número es trascendental, por tanto no es posible enumerarlo.
-
-\textbf{Sugerencias:} ...
+Seg\'un lo anterior podemos concluir que si no es posible determinar si un n\'umero es trascendental entonces no es posible enumerar el conjunto de los n\'umeros reales, por tanto se puede decir que los conceptos de enumerable y computable son equivalentes, ya que no es posible determinar mediante un proceso si un n\'umero es trascendental, por tanto no es posible enumerarlo.
 
 
 %------------------------------------------------
 \section*{Conferencia 3}
 
-%------------------------------------------------
+La \textit{Universal Turing Machine} es una m\'aquina que construye y que es capaz de simular el proceso que realiza cualquier otra MT. Para realizar tal simulaci\'on, la MUT (por sus siglas en espa\~nol) recibe como entrada en su cinta adem\'as de los datos de un problema, el programa (las 
+instrucciones) de cualquier MT y simula su ejecuci\'on dejando sobre su cinta el resultado o salida que produce la MT simulada.
 
-\section*{Conferencia 4}
+La idea fundamental detr\'as de esta es que en vez de tener s\'olo m\'aquinas (MTs) que resuelven problemas particulares, tener una m\'aquina universal (MUT) 
+capaz de simular la computaci\'on que realiza cualquier MT resolviendo un problema particular. Considerando las instrucciones de cualquier MT como un programa, la MUT almacena programas y los ejecuta, surgiendo as\'i por primera vez el concepto de m\'aquina con programa almacenado, fundamento de las computadoras modernas.
 
-%------------------------------------------------
+Las instrucciones de la MUT son bastante complicadas e incluyen el uso de subrutinas (Turing utiliz\'o por primera vez el concepto de subrutina). Partimos de la representaci\'on de un problema en c\'odigo binario. Los datos que en la configuraci\'on inicial recibe la MUT son una sucesi\'on binaria. Por lo tanto, podemos reducir el problema de la decidibilidad al problema de determinar si para el conjunto de sucesiones binarias (instrucciones-datos) que constituyen el problema existe una MUT (algoritmo) que finaliza en cualquier caso ya sea dando una respuesta afirmativa y proporcionando una solución al problema o bien diciendo que para los datos introducidos no existe soluci\'on computable.
 
-\section*{Conferencia 5}
+Una MT se denomina \textit{circular} si siempre imprime un n\'umero finito de d\'igitos binarios.
 
-%------------------------------------------------
+Una MT se denomina \textit{no-circular} si imprime un n\'umero infinito de d\'igitos binarios.
 
-\section*{Conferencia 6}
+Una secuencia de d\'igitos binarios se denomina \textit{secuencia computable} si es una secuencia computada por alguna m\'aquina \textit{no-circular}. De esta forma se definen como computables secuencias 
+de d\'igitos binarios que son infinitas. Turing pasa a demostrar que no toda secuencia infinita de d\'igitos binarios es \textit{computable}.
 
-%------------------------------------------------
+Al quedar demostrado que no toda secuencia infinita de d\'igitos binarios es \textit{computable} sabemos que no existe una MUT que de modo general determine si una m\'aquina es no-circular. El resultado mas inmediato para la Ciencia de la Computaci\'on tiene 
+que ver con un problema esencial de los programas, su terminaci\'on.
 
-\section*{Conferencia 7}
-
-%------------------------------------------------
-
-\section*{Conferencia 8}
+Aplicando el resultado de Turing: 
+No hay un programa de computadora que pueda determinar en  general si cualquier programa de computadora termina o no.
 
 %------------------------------------------------
 
